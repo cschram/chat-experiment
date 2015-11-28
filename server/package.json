@@ -1,0 +1,16 @@
+{
+  "name": "chat-experiment-server",
+  "version": "1.0.0",
+  "description": "Experiment using RethinkDB changefeeds and Socket.IO to push UI updates to React.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Corey Schram <coreyschram@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "rethinkdb": "^2.2.0",
+    "socket.io": "^1.3.7",
+    "winston": "^2.1.1"
+  }
+}

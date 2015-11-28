@@ -1,0 +1,35 @@
+#!/bin/env node
+"use strict";
+
+/*
+ * Create the database and tables.
+ *
+ * Usage:
+ *   scripts/create-db config.yml data/dbset.json
+ */
+
+let fs = require('fs');
+let r = require('../server/node_modules/rethinkdb');
+let config = require('../config/db.json');
+
+console.log('Creating database and tables...');
+
+r.connect({
+    host: config.host,
+    port: config.port,
+    authKey: config.authKey
+}).then((conn) => {
+    return r.dbCreate(config.db).run(conn).then(() => {
+        conn.use(config.db);
+        return Promise.all([
+            r.tableCreate('users', { primaryKey: 'username' }).run(conn),
+            r.tableCreate('chats').run(conn),
+            r.tableCreate('messages').run(conn)
+        ]);
+    });
+}).then(() => {
+    console.log('Finished.');
+    process.exit();
+}).catch((err) => {
+    console.error(err);
+});
