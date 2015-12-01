@@ -35,6 +35,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "client/app/index.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "client/app/reducer.js",
+			"settings":
+			{
+				"buffer_size": 450,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -81,10 +97,17 @@
 	},
 	"expanded_folders":
 	[
-		"/E/projects/chat-experiment"
+		"/E/projects/chat-experiment",
+		"/E/projects/chat-experiment/client",
+		"/E/projects/chat-experiment/client/app",
+		"/E/projects/chat-experiment/scripts",
+		"/E/projects/chat-experiment/server"
 	],
 	"file_history":
 	[
+		"/E/projects/chat-experiment/client/package.json",
+		"/E/projects/chat-experiment/server/package.json",
+		"/E/projects/chat-experiment/.gitignore",
 		"/E/projects/push-chat/client/package.json",
 		"/E/projects/push-chat/client/gulpfile.js",
 		"/E/projects/push-chat/client/.babelrc",
@@ -296,8 +319,66 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "client/app/index.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/app/reducer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 450,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								450,
+								450
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
