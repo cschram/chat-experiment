@@ -1,38 +1,37 @@
-import Immutable from 'immutable';
+import {ACTION_TYPES} from './actions';
 
-const initialState = Immutable.Map({
+const initialState = {
     currentUser: null,
     users: [],
     messages: []
-});
-
-export const ACTION_TYPES = {
-    // WebSocket pushed events
-    PUSH_USERS: 'PUSH_USERS',
-    PUSH_MESSAGES: 'PUSH_MESSAGES',
-
-    // UI events
-    LOGIN: 'LOGIN',
-    NEW_MESSAGE: 'NEW_MESSAGE'
 };
 
-export function reducer(state = initialState, action) {
+export default function reducer(state = initialState, action) {
     switch (action.type) {
-        case ACTION_TYPES.PUSH_USERS:
-            return state.set('users', action.users);
-            break;
-        case ACTION_TYPES.PUSH_MESSAGES:
-            return state.set('messages', action.messages);
-            break;
-
-        case ACTION_TYPES.LOGIN:
-            return state.set('currentUser', action.username);
-            break;
-        case ACTION_TYPES.NEW_MESSAGE:
-            return state.updateIn(['messages'], (messages) => messages.push(action.msg));
-            break;
-
-        default:
-            return initialState;
+    case ACTION_TYPES.PUSH_USERS:
+        return Object.assign({}, state, {
+            users: action.payload
+        });
+        break;
+    case ACTION_TYPES.PUSH_MESSAGES:
+        return Object.assign({}, state, {
+            messages: action.payload
+        });
+        break;
+    case ACTION_TYPES.LOGIN:
+        return Object.assign({}, state, {
+            currentUser: action.payload
+        });
+        break;
+    case ACTION_TYPES.SEND_MESSAGE:
+        return Object.assign({}, state, {
+            messages: state.messages.concat([{
+                username: state.currentUser,
+                text: action.payload
+            }])
+        });
+        break;
+    default:
+        return state;
     }
 }
