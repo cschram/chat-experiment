@@ -20,7 +20,8 @@ export default function reducer(state = initialState, action) {
         break;
     case ACTION_TYPES.LOGIN:
         return Object.assign({}, state, {
-            currentUser: action.payload
+            currentUser: action.payload,
+            users: state.users.concat([action.payload])
         });
         break;
     case ACTION_TYPES.SEND_MESSAGE:

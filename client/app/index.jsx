@@ -6,6 +6,8 @@ import store from './store';
 import history from './history';
 import Chat from './views/chat.jsx';
 import Login from './views/login.jsx';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
 
 // Redirect the user to the login page if they are not logged in
 function requireAuth(nextState, replaceState) {

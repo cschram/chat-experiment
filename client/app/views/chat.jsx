@@ -1,46 +1,46 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {sendMessage} from '../actions';
+import {LeftNav,Divider,Styles} from 'material-ui';
+import UserList from '../components/userlist.jsx';
+import MessageList from '../components/messagelist.jsx';
+import MessageInput from '../components/messageinput.jsx';
 
 class Chat extends React.Component {
     render() {
+        let styles = this.getStyles();
         return (
-            <div className="chat">
-                <div className="users">
-                    <ul>{this.renderUsers(this.props.users)}</ul>
+            <div style={styles.root}>
+                <div style={styles.content}>
+                    <MessageList messages={this.props.messages}
+                                 style={styles.messageList} />
+                    <Divider />
+                    <MessageInput dispatch={this.props.dispatch} />
                 </div>
-                <div className="messages">
-                    <ul>{this.renderMessages(this.props.messages)}</ul>
-                </div>
-                <form className="message-input" onSubmit={e => this.handleMessage(e)}>
-                    <input type="text" ref="message" />
-                    <button onClick={e => this.handleMessage(e)}>Send</button>
-                </form>
+                <LeftNav docked={true} open={true}>
+                    <UserList users={this.props.users} />
+                </LeftNav>
             </div>
         );
     }
 
-    renderUsers(users) {
-        return users.map((user, index) => {
-            return <li className="user" key={index}>{user}</li>;
-        });
-    }
-
-    renderMessages(messages) {
-        return messages.map((message, index) => {
-            return (<li className="message" key={index}>
-                <strong>{message.username}:</strong>
-                <span>{message.text}</span>
-            </li>);
-        });
-    }
-
-    handleMessage(e) {
-        e.preventDefault();
-        const node = this.refs.message;
-        const text = node.value.trim();
-        this.props.dispatch(sendMessage(text));
-        node.value = '';
+    getStyles() {
+        let padding = Styles.Spacing.desktopGutter;
+        return Object.assign({
+            root: {
+                height: '100%',
+                overflow: 'hidden'
+            },
+            content: {
+                height: '100%',
+                margin: padding,
+                overflow: 'hidden',
+                paddingLeft: 256
+            },
+            messageList: {
+                height: 'calc(100% - 78px - ' + padding + 'px)',
+                overflowY: 'auto'
+            }
+        }, this.props.style);
     }
 }
 
