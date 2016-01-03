@@ -1,6 +1,7 @@
 "use strict";
 
 let r = require('rethinkdb');
+let logger = require('./logger');
 
 class DBConnection {
     constructor(config) {
@@ -15,20 +16,38 @@ class DBConnection {
     }
 
     getUser(username) {
-        return r.table('users').get(username).run(this.conn);
+        return r.table('users')
+                .get(username)
+                .run(this.conn);
     }
 
     loginUser(username) {
-        return this.getUser(username).then(() => {
-            throw `User "${username}" already exists.`;
-        }).catch(() => {
-            return r.table('users').insert({
-                username: name,
-                game: null,
-                score: 0,
-                cards: []
-            }).run(this.conn);
+        return this.getUser(username).then((user) => {
+            if (user) {
+                throw `Username "${username}" is taken.`;
+            } else {
+                return r.table('users').insert({
+                    username: username
+                }).run(this.conn);  
+            }
         });
+    }
+
+    logoutUser(username) {
+        return r.table('users')
+                .get(username)
+                .delete()
+                .run(this.conn);
+    }
+
+    sendMessage(username, text) {
+        return r.table('messages')
+                .insert({
+                    username: username,
+                    text: text,
+                    timestamp: r.now()
+                })
+                .run(this.conn);
     }
 }
 

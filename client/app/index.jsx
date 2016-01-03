@@ -1,13 +1,17 @@
+import debug from 'debug';
+debug.enable('connection');
+
 import React from 'react';
 import {render} from 'react-dom';
 import {Provider} from 'react-redux';
 import {Router, Route, Link} from 'react-router';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+
 import store from './store';
 import history from './history';
 import Chat from './views/chat.jsx';
 import Login from './views/login.jsx';
-import injectTapEventPlugin from 'react-tap-event-plugin';
-injectTapEventPlugin();
 
 // Redirect the user to the login page if they are not logged in
 function requireAuth(nextState, replaceState) {

@@ -2,7 +2,7 @@
 
 let path = require('path');
 let winston = require('winston');
-let config = require('./config');
+let config = require('../config.json');
 
 function timestamp() {
     return (new Date).toUTCString();
@@ -20,13 +20,13 @@ module.exports = new winston.Logger({
       name      : 'server.debug.log',
       json      : false,
       timestamp : timestamp,
-      filename  : path.resolve('logs/server.debug.log')
+      filename  : path.resolve(config.logDirectory + 'server.debug.log')
     }),
     new winston.transports.File({
       name      : 'server.debug.json',
       json      : true,
       timestamp : true,
-      filename  : path.resolve('logs/server.debug.json')
+      filename  : path.resolve(config.logDirectory + 'server.debug.json')
     })
   ],
   exceptionHandlers: [
@@ -39,13 +39,13 @@ module.exports = new winston.Logger({
       name      : 'server.error.log',
       json      : false,
       timestamp : timestamp,
-      filename  : path.resolve('logs/server.error.log')
+      filename  : path.resolve(config.logDirectory + 'server.error.log')
     }),
     new winston.transports.File({
       name      : 'server.error.json',
       json      : true,
       timestamp : timestamp,
-      filename  : path.resolve('logs/server.error.json')
+      filename  : path.resolve(config.logDirectory + 'server.error.json')
     })
   ]
 });

@@ -1,0 +1,12 @@
+{
+    "logDirectory": "logs/",
+    "server": {
+        "host": "localhost",
+        "port": 9000
+    },
+    "database": {
+        "host": "localhost",
+        "port": 28015,
+        "db": "chat"
+    }
+}

@@ -3,14 +3,11 @@
 
 /*
  * Create the database and tables.
- *
- * Usage:
- *   scripts/create-db config.yml data/dbset.json
  */
 
 let fs = require('fs');
 let r = require('../server/node_modules/rethinkdb');
-let config = require('../config/db.json');
+let config = require('../server/config.json').database;
 
 console.log('Creating database and tables...');
 
