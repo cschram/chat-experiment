@@ -14,7 +14,8 @@ class Chat extends React.Component {
                     <MessageList messages={this.props.messages}
                                  style={styles.messageList} />
                     <Divider />
-                    <MessageInput dispatch={this.props.dispatch} />
+                    <MessageInput currentUser={this.props.currentUser}
+                                  dispatch={this.props.dispatch} />
                 </div>
                 <LeftNav docked={true} open={true}>
                     <UserList users={this.props.users} />

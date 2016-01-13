@@ -21,6 +21,12 @@ class DBConnection {
                 .run(this.conn);
     }
 
+    getUsers() {
+        return r.table('users')
+                .run(this.conn)
+                .then(cursor => cursor.toArray());
+    }
+
     loginUser(username) {
         return this.getUser(username).then((user) => {
             if (user) {
@@ -40,6 +46,13 @@ class DBConnection {
                 .run(this.conn);
     }
 
+    getMessages() {
+        return r.table('messages')
+                .orderBy('timestamp')
+                .run(this.conn)
+                .then(cursor => cursor.toArray());
+    }
+
     sendMessage(username, text) {
         return r.table('messages')
                 .insert({
@@ -47,6 +60,12 @@ class DBConnection {
                     text: text,
                     timestamp: r.now()
                 })
+                .run(this.conn);
+    }
+
+    getTableFeed(table) {
+        return r.table(table)
+                .changes({ includeInitial: true })
                 .run(this.conn);
     }
 }

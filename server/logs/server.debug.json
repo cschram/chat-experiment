@@ -425,3 +425,254 @@
 {"level":"info","message":"User \"corey\" disconnected.","timestamp":"2016-01-03T03:34:58.149Z"}
 {"level":"info","message":"User \"test\" disconnected.","timestamp":"2016-01-03T03:35:00.629Z"}
 {"level":"info","message":"New connection.","timestamp":"2016-01-03T03:35:01.285Z"}
+{"level":"info","message":"Connected to database","timestamp":"2016-01-03T04:54:52.675Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T04:54:52.824Z"}
+{"level":"info","message":"Connected to database","timestamp":"2016-01-03T04:55:16.605Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T04:55:16.825Z"}
+{"level":"info","message":"Connected to database","timestamp":"2016-01-03T04:55:39.743Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T04:55:43.012Z"}
+{"level":"info","message":"Connected to database.","timestamp":"2016-01-03T04:56:37.861Z"}
+{"level":"info","message":"Setup database feeds.","timestamp":"2016-01-03T04:56:37.938Z"}
+{"level":"info","message":"Started socket server.","timestamp":"2016-01-03T04:56:37.944Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T04:56:38.120Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T04:56:46.916Z"}
+{"level":"info","message":"Connected to database.","timestamp":"2016-01-03T04:57:51.180Z"}
+{"level":"info","message":"Setup database feeds.","timestamp":"2016-01-03T04:57:51.255Z"}
+{"level":"info","message":"Started socket server.","timestamp":"2016-01-03T04:57:51.262Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T04:57:52.074Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T04:57:54.823Z"}
+{"level":"info","message":"Connected to database.","timestamp":"2016-01-03T04:58:46.315Z"}
+{"level":"info","message":"Setup database feeds.","timestamp":"2016-01-03T04:58:46.393Z"}
+{"level":"info","message":"Started socket server.","timestamp":"2016-01-03T04:58:46.400Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T04:58:46.422Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T04:58:51.195Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-03T04:59:01.890Z"}
+{"level":"info","message":"Connected to database.","timestamp":"2016-01-03T04:59:25.742Z"}
+{"level":"info","message":"Setup database feeds.","timestamp":"2016-01-03T04:59:25.812Z"}
+{"level":"info","message":"Started socket server.","timestamp":"2016-01-03T04:59:25.818Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T04:59:26.408Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T04:59:39.196Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-03T04:59:42.536Z"}
+{"level":"info","message":"User \"corey\" logged out.","timestamp":"2016-01-03T04:59:45.935Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T04:59:46.729Z"}
+{"level":"info","message":"Connected to database.","timestamp":"2016-01-03T05:03:51.186Z"}
+{"level":"info","message":"Setup database feeds.","timestamp":"2016-01-03T05:03:51.267Z"}
+{"level":"info","message":"Started socket server.","timestamp":"2016-01-03T05:03:51.274Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T05:03:51.461Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T05:03:55.910Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-03T05:03:59.149Z"}
+{"level":"info","message":"User \"corey\" logged out.","timestamp":"2016-01-03T05:06:07.584Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T05:06:08.236Z"}
+{"level":"info","message":"Connected to database.","timestamp":"2016-01-03T05:06:25.703Z"}
+{"level":"info","message":"Setup database feeds.","timestamp":"2016-01-03T05:06:25.778Z"}
+{"level":"info","message":"Started socket server.","timestamp":"2016-01-03T05:06:25.785Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T05:06:25.899Z"}
+{"new_val":{"username":"corey"},"old_val":null,"level":"info","message":"","timestamp":"2016-01-03T05:06:29.611Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-03T05:06:29.621Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T05:06:52.605Z"}
+{"new_val":{"username":"foo"},"old_val":null,"level":"info","message":"","timestamp":"2016-01-03T05:06:55.646Z"}
+{"level":"info","message":"New login from \"foo\".","timestamp":"2016-01-03T05:06:55.666Z"}
+{"level":"info","message":"Connected to database.","timestamp":"2016-01-03T05:07:57.083Z"}
+{"level":"info","message":"Setup database feeds.","timestamp":"2016-01-03T05:07:57.159Z"}
+{"level":"info","message":"Started socket server.","timestamp":"2016-01-03T05:07:57.166Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T05:07:57.338Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T05:08:02.706Z"}
+{"new_val":{"username":"corey"},"old_val":null,"level":"info","message":"","timestamp":"2016-01-03T05:08:06.122Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-03T05:08:06.125Z"}
+{"new_val":{"username":"test"},"old_val":null,"level":"info","message":"","timestamp":"2016-01-03T05:08:12.768Z"}
+{"level":"info","message":"New login from \"test\".","timestamp":"2016-01-03T05:08:12.771Z"}
+{"level":"info","message":"User \"test\" logged out.","timestamp":"2016-01-03T05:09:07.111Z"}
+{"new_val":null,"old_val":{"username":"test"},"level":"info","message":"","timestamp":"2016-01-03T05:09:07.181Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T05:09:07.604Z"}
+{"level":"info","message":"User \"corey\" logged out.","timestamp":"2016-01-03T05:09:07.767Z"}
+{"new_val":null,"old_val":{"username":"corey"},"level":"info","message":"","timestamp":"2016-01-03T05:09:07.830Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-03T05:09:08.332Z"}
+{"level":"info","message":"Connected to database.","timestamp":"2016-01-13T03:03:11.715Z"}
+{"level":"info","message":"Setup database feeds.","timestamp":"2016-01-13T03:03:11.802Z"}
+{"level":"info","message":"Started socket server.","timestamp":"2016-01-13T03:03:11.809Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:03:20.961Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:03:26.866Z"}
+{"new_val":{"username":"corey"},"old_val":null,"level":"info","message":"","timestamp":"2016-01-13T03:03:30.014Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-13T03:03:30.024Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:03:37.845Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:03:38.698Z"}
+{"new_val":{"username":"test"},"old_val":null,"level":"info","message":"","timestamp":"2016-01-13T03:03:44.081Z"}
+{"level":"info","message":"New login from \"test\".","timestamp":"2016-01-13T03:03:44.111Z"}
+{"level":"info","message":"Connected to database.","timestamp":"2016-01-13T03:04:03.284Z"}
+{"new_val":{"username":"corey"},"level":"info","message":"","timestamp":"2016-01-13T03:04:03.361Z"}
+{"new_val":{"username":"test"},"level":"info","message":"","timestamp":"2016-01-13T03:04:03.361Z"}
+{"level":"info","message":"Setup database feeds.","timestamp":"2016-01-13T03:04:03.363Z"}
+{"level":"info","message":"Started socket server.","timestamp":"2016-01-13T03:04:03.369Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:04:03.466Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:04:04.018Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:04:07.935Z"}
+{"new_val":null,"old_val":{"username":"corey"},"level":"info","message":"","timestamp":"2016-01-13T03:04:30.066Z"}
+{"new_val":null,"old_val":{"username":"test"},"level":"info","message":"","timestamp":"2016-01-13T03:04:30.130Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:04:36.919Z"}
+{"new_val":{"username":"corey"},"old_val":null,"level":"info","message":"","timestamp":"2016-01-13T03:04:39.003Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-13T03:04:39.007Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:04:41.772Z"}
+{"new_val":{"username":"test"},"old_val":null,"level":"info","message":"","timestamp":"2016-01-13T03:04:43.814Z"}
+{"level":"info","message":"New login from \"test\".","timestamp":"2016-01-13T03:04:43.818Z"}
+{"level":"info","message":"Connected to database.","timestamp":"2016-01-13T03:36:29.145Z"}
+{"level":"info","message":"Setup database feeds.","timestamp":"2016-01-13T03:36:29.224Z"}
+{"level":"info","message":"Started socket server.","timestamp":"2016-01-13T03:36:29.231Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:36:30.028Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:36:34.019Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:37:45.838Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:37:52.235Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:37:53.746Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-13T03:38:07.889Z"}
+{"level":"info","message":"New login from \"test\".","timestamp":"2016-01-13T03:38:15.694Z"}
+{"level":"info","message":"User \"corey\" logged out.","timestamp":"2016-01-13T03:48:51.739Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:48:52.285Z"}
+{"level":"info","message":"User \"test\" logged out.","timestamp":"2016-01-13T03:48:54.368Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:48:55.054Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-13T03:49:03.517Z"}
+{"level":"info","message":"Connected to database.","timestamp":"2016-01-13T03:51:07.387Z"}
+{"level":"info","message":"Setup database feeds.","timestamp":"2016-01-13T03:51:07.462Z"}
+{"level":"info","message":"Started socket server.","timestamp":"2016-01-13T03:51:07.468Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:51:10.030Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:51:10.227Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:51:17.421Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:51:18.619Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-13T03:51:21.849Z"}
+{"level":"info","message":"User \"corey\" logged out.","timestamp":"2016-01-13T03:51:45.540Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:51:46.070Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-13T03:51:50.397Z"}
+{"level":"info","message":"Connected to database.","timestamp":"2016-01-13T03:53:38.648Z"}
+{"level":"info","message":"Setup database feeds.","timestamp":"2016-01-13T03:53:38.723Z"}
+{"level":"info","message":"Started socket server.","timestamp":"2016-01-13T03:53:38.730Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:53:38.984Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:53:39.022Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:53:44.620Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:53:45.521Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-13T03:53:55.919Z"}
+{"0":{"_type":3,"_conn":{"host":"rethink.cschram.com","port":28015,"db":"chat","authKey":"IV4KBuVdPbSwtD9SO5sQn4","timeout":20,"ssl":false,"outstandingCallbacks":{"1":{"opts":{},"cursor":{"_type":3,"_conn":{"$ref":"$[0][\"_conn\"]"},"_token":1,"_opts":{"$ref":"$[0][\"_conn\"][\"outstandingCallbacks\"][\"1\"][\"opts\"]"},"_responses":[],"_responseIndex":0,"_outstandingRequests":1,"_iterations":3,"_endFlag":false,"_contFlag":true,"_closeAsap":false,"_cont":null,"_cbQueue":[null],"_closeCb":null,"_closeCbPromise":null}},"2":{"opts":{},"cursor":{"_type":3,"_conn":{"$ref":"$[0][\"_conn\"]"},"_token":2,"_opts":{"$ref":"$[0][\"_conn\"][\"outstandingCallbacks\"][\"2\"][\"opts\"]"},"_responses":[],"_responseIndex":0,"_outstandingRequests":1,"_iterations":0,"_endFlag":false,"_contFlag":true,"_closeAsap":false,"_cont":null,"_cbQueue":[null],"_closeCb":null,"_closeCbPromise":null}}},"nextToken":8,"open":true,"closing":false,"buffer":{},"_events":{},"_eventsCount":null,"_closePromise":null,"rawSocket":{"_connecting":false,"_hadError":false,"_handle":{"_externalStream":{},"fd":-1,"reading":true,"owner":{"$ref":"$[0][\"_conn\"][\"rawSocket\"]"},"onconnection":null,"writeQueueSize":0},"_parent":null,"_host":"rethink.cschram.com","_readableState":{"objectMode":false,"highWaterMark":16384,"buffer":[],"length":0,"pipes":null,"pipesCount":0,"flowing":true,"ended":false,"endEmitted":false,"reading":true,"sync":false,"needReadable":true,"emittedReadable":false,"readableListening":false,"defaultEncoding":"utf8","ranOut":false,"awaitDrain":0,"readingMore":false,"decoder":null,"encoding":null,"resumeScheduled":false},"readable":true,"domain":null,"_events":{"error":[null,null]},"_eventsCount":7,"_writableState":{"objectMode":false,"highWaterMark":16384,"needDrain":false,"ending":false,"ended":false,"finished":false,"decodeStrings":false,"defaultEncoding":"utf8","length":0,"writing":false,"corked":0,"sync":false,"bufferProcessing":false,"writecb":null,"writelen":0,"bufferedRequest":null,"lastBufferedRequest":null,"pendingcb":0,"prefinished":false,"errorEmitted":false},"writable":true,"allowHalfOpen":false,"destroyed":false,"bytesRead":534,"_bytesDispatched":581,"_sockname":null,"_pendingData":null,"_pendingEncoding":"","_consuming":true}},"_token":6,"_opts":{},"_responses":[{"t":2,"r":[{"username":"corey"}],"n":[]}],"_responseIndex":0,"_outstandingRequests":0,"_iterations":0,"_endFlag":true,"_contFlag":false,"_closeAsap":false,"_cont":null,"_cbQueue":[],"_closeCb":null,"_closeCbPromise":null},"1":{"_type":3,"_conn":{"$ref":"$[0][\"_conn\"]"},"_token":7,"_opts":{},"_responses":[],"_responseIndex":0,"_outstandingRequests":0,"_iterations":0,"_endFlag":true,"_contFlag":false,"_closeAsap":false,"_cont":null,"_cbQueue":[],"_closeCb":null,"_closeCbPromise":null},"level":"info","message":"","timestamp":"2016-01-13T03:53:56.003Z"}
+{"level":"info","message":"Connected to database.","timestamp":"2016-01-13T03:55:50.167Z"}
+{"level":"info","message":"Setup database feeds.","timestamp":"2016-01-13T03:55:50.240Z"}
+{"level":"info","message":"Started socket server.","timestamp":"2016-01-13T03:55:50.247Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:55:50.279Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:55:50.286Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:55:56.182Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:55:57.914Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-13T03:56:01.460Z"}
+{"0":[{"username":"corey"}],"1":[],"level":"info","message":"","timestamp":"2016-01-13T03:56:01.533Z"}
+{"level":"info","message":"User \"corey\" logged out.","timestamp":"2016-01-13T03:59:27.858Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:59:28.382Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:59:35.293Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-13T03:59:38.222Z"}
+{"0":[{"username":"corey"}],"1":[],"level":"info","message":"","timestamp":"2016-01-13T03:59:38.288Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T03:59:41.391Z"}
+{"level":"info","message":"New login from \"test\".","timestamp":"2016-01-13T03:59:43.112Z"}
+{"0":[{"username":"corey"},{"username":"test"}],"1":[],"level":"info","message":"","timestamp":"2016-01-13T03:59:43.180Z"}
+{"level":"info","message":"User \"corey\" logged out.","timestamp":"2016-01-13T04:00:35.230Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T04:00:35.769Z"}
+{"level":"info","message":"User \"test\" logged out.","timestamp":"2016-01-13T04:00:39.181Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T04:00:39.860Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-13T04:00:47.914Z"}
+{"0":[{"username":"corey"}],"1":[],"level":"info","message":"","timestamp":"2016-01-13T04:00:48.358Z"}
+{"level":"info","message":"New login from \"test\".","timestamp":"2016-01-13T04:00:51.209Z"}
+{"0":[{"username":"corey"},{"username":"test"}],"1":[],"level":"info","message":"","timestamp":"2016-01-13T04:00:51.278Z"}
+{"level":"info","message":"User \"corey\" logged out.","timestamp":"2016-01-13T04:11:50.168Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T04:11:50.709Z"}
+{"level":"info","message":"User \"test\" logged out.","timestamp":"2016-01-13T04:11:52.145Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T04:11:52.838Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-13T04:11:57.919Z"}
+{"0":[{"username":"corey"}],"1":[],"level":"info","message":"","timestamp":"2016-01-13T04:11:57.987Z"}
+{"level":"info","message":"New login from \"corey2\".","timestamp":"2016-01-13T04:12:02.996Z"}
+{"0":[{"username":"corey"},{"username":"corey2"}],"1":[],"level":"info","message":"","timestamp":"2016-01-13T04:12:03.069Z"}
+{"level":"info","message":"Connected to database.","timestamp":"2016-01-13T04:37:25.403Z"}
+{"level":"info","message":"Setup database feeds.","timestamp":"2016-01-13T04:37:25.479Z"}
+{"level":"info","message":"Started socket server.","timestamp":"2016-01-13T04:37:25.486Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T04:37:25.529Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T04:37:25.536Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T04:37:35.812Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T04:37:36.791Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-13T04:37:40.577Z"}
+{"level":"info","message":"New login from \"corey2\".","timestamp":"2016-01-13T04:37:44.895Z"}
+{"level":"info","message":"User \"corey\" logged out.","timestamp":"2016-01-13T04:39:29.282Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T04:39:29.826Z"}
+{"level":"info","message":"User \"corey2\" logged out.","timestamp":"2016-01-13T04:39:30.992Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T04:39:31.704Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-13T04:39:37.163Z"}
+{"level":"info","message":"New login from \"corey2\".","timestamp":"2016-01-13T04:39:41.769Z"}
+{"level":"info","message":"User \"corey\" logged out.","timestamp":"2016-01-13T04:41:04.662Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T04:41:05.220Z"}
+{"level":"info","message":"User \"corey2\" logged out.","timestamp":"2016-01-13T04:41:05.914Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T04:41:06.607Z"}
+{"level":"info","message":"Connected to database.","timestamp":"2016-01-13T04:41:11.400Z"}
+{"level":"info","message":"Setup database feeds.","timestamp":"2016-01-13T04:41:11.473Z"}
+{"level":"info","message":"Started socket server.","timestamp":"2016-01-13T04:41:11.480Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T04:41:11.527Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T04:41:11.534Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-13T04:41:27.413Z"}
+{"level":"info","message":"New login from \"corey2\".","timestamp":"2016-01-13T04:41:31.145Z"}
+{"level":"info","message":"User \"corey\" logged out.","timestamp":"2016-01-13T05:00:18.083Z"}
+{"level":"info","message":"users:new corey","timestamp":"2016-01-13T05:00:18.149Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:00:18.632Z"}
+{"level":"info","message":"User \"corey2\" logged out.","timestamp":"2016-01-13T05:00:18.980Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:00:19.744Z"}
+{"level":"info","message":"Connected to database.","timestamp":"2016-01-13T05:02:39.393Z"}
+{"level":"info","message":"Setup database feeds.","timestamp":"2016-01-13T05:02:39.467Z"}
+{"level":"info","message":"Started socket server.","timestamp":"2016-01-13T05:02:39.474Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:02:39.530Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:02:39.538Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-13T05:02:44.782Z"}
+{"new_val":{"username":"corey2"},"old_val":null,"level":"info","message":"","timestamp":"2016-01-13T05:02:50.063Z"}
+{"level":"info","message":"New login from \"corey2\".","timestamp":"2016-01-13T05:02:50.064Z"}
+{"level":"info","message":"User \"corey2\" logged out.","timestamp":"2016-01-13T05:03:38.045Z"}
+{"new_val":null,"old_val":{"username":"corey2"},"level":"info","message":"","timestamp":"2016-01-13T05:03:38.111Z"}
+{"level":"info","message":"User \"corey\" logged out.","timestamp":"2016-01-13T05:03:38.531Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:03:38.578Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:03:39.279Z"}
+{"level":"info","message":"Connected to database.","timestamp":"2016-01-13T05:03:43.271Z"}
+{"level":"info","message":"Setup database feeds.","timestamp":"2016-01-13T05:03:43.346Z"}
+{"level":"info","message":"Started socket server.","timestamp":"2016-01-13T05:03:43.353Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:03:43.484Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:03:44.015Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-13T05:03:51.214Z"}
+{"level":"info","message":"New login from \"corey2\".","timestamp":"2016-01-13T05:03:55.542Z"}
+{"level":"info","message":"User \"corey\" logged out.","timestamp":"2016-01-13T05:11:17.739Z"}
+{"level":"info","message":"User \"corey2\" logged out.","timestamp":"2016-01-13T05:11:18.248Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:11:18.329Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:11:18.976Z"}
+{"level":"info","message":"Connected to database.","timestamp":"2016-01-13T05:11:23.841Z"}
+{"level":"info","message":"Setup database feeds.","timestamp":"2016-01-13T05:11:23.918Z"}
+{"level":"info","message":"Started socket server.","timestamp":"2016-01-13T05:11:23.925Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:11:24.032Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:11:24.054Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-13T05:11:28.247Z"}
+{"level":"info","message":"New login from \"corey2\".","timestamp":"2016-01-13T05:11:31.782Z"}
+{"new_val":{"id":"94bf3b1c-5588-4aa2-9014-5a543198d9ac","text":"test","timestamp":"2016-01-13T05:11:33.074Z","username":"corey2"},"old_val":null,"level":"info","message":"","timestamp":"2016-01-13T05:11:34.186Z"}
+{"new_val":{"id":"94bf3b1c-5588-4aa2-9014-5a543198d9ac","text":"test","timestamp":"2016-01-13T05:11:33.074Z","username":"corey2"},"old_val":null,"level":"info","message":"","timestamp":"2016-01-13T05:11:34.186Z"}
+{"level":"info","message":"User \"corey\" logged out.","timestamp":"2016-01-13T05:15:50.545Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:15:51.096Z"}
+{"level":"info","message":"User \"corey2\" logged out.","timestamp":"2016-01-13T05:15:52.563Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:15:53.258Z"}
+{"level":"info","message":"Connected to database.","timestamp":"2016-01-13T05:15:56.858Z"}
+{"level":"info","message":"Setup database feeds.","timestamp":"2016-01-13T05:15:56.937Z"}
+{"level":"info","message":"Started socket server.","timestamp":"2016-01-13T05:15:56.944Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:15:57.022Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:15:57.030Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-13T05:16:00.638Z"}
+{"level":"info","message":"New login from \"corey2\".","timestamp":"2016-01-13T05:16:05.107Z"}
+{"level":"info","message":"User \"corey\" logged out.","timestamp":"2016-01-13T05:17:08.800Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:17:09.372Z"}
+{"level":"info","message":"User \"corey2\" logged out.","timestamp":"2016-01-13T05:17:09.554Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:17:10.269Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-13T05:17:13.443Z"}
+{"level":"info","message":"New login from \"corey2\".","timestamp":"2016-01-13T05:17:23.255Z"}
+{"level":"info","message":"User \"corey\" logged out.","timestamp":"2016-01-13T05:19:25.489Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:19:26.043Z"}
+{"level":"info","message":"User \"corey2\" logged out.","timestamp":"2016-01-13T05:19:26.149Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:19:26.888Z"}
+{"level":"info","message":"Connected to database.","timestamp":"2016-01-13T05:19:30.091Z"}
+{"level":"info","message":"Setup database feeds.","timestamp":"2016-01-13T05:19:30.173Z"}
+{"level":"info","message":"Started socket server.","timestamp":"2016-01-13T05:19:30.180Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:19:30.222Z"}
+{"level":"info","message":"New connection.","timestamp":"2016-01-13T05:19:30.229Z"}
+{"level":"info","message":"New login from \"corey\".","timestamp":"2016-01-13T05:19:35.575Z"}
+{"level":"info","message":"New login from \"corey2\".","timestamp":"2016-01-13T05:19:39.457Z"}
+{"level":"info","message":"User \"corey\" logged out.","timestamp":"2016-01-13T06:53:42.195Z"}
+{"level":"info","message":"User \"corey2\" logged out.","timestamp":"2016-01-13T06:53:49.526Z"}

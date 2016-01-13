@@ -8,28 +8,29 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
     switch (action.type) {
-    case ACTION_TYPES.PUSH_USERS:
-        return Object.assign({}, state, {
-            users: action.payload
-        });
-        break;
-    case ACTION_TYPES.PUSH_MESSAGES:
-        return Object.assign({}, state, {
-            messages: action.payload
-        });
-        break;
     case ACTION_TYPES.LOGIN:
+        return Object.assign({}, state, action.payload.state, {
+            currentUser: action.payload.username
+        });
+        break;
+    case ACTION_TYPES.LOGOUT:
         return Object.assign({}, state, {
-            currentUser: action.payload,
+            currentUser: null
+        });
+        break;
+    case ACTION_TYPES.NEW_USER:
+        return Object.assign({}, state, {
             users: state.users.concat([action.payload])
         });
         break;
-    case ACTION_TYPES.SEND_MESSAGE:
+    case ACTION_TYPES.REMOVE_USER:
         return Object.assign({}, state, {
-            messages: state.messages.concat([{
-                username: state.currentUser,
-                text: action.payload
-            }])
+            users: state.users.filter(user => user != action.payload)
+        });
+        break;
+    case ACTION_TYPES.MESSAGE:
+        return Object.assign({}, state, {
+            messages: state.messages.concat([action.payload])
         });
         break;
     default:

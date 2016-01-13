@@ -12,13 +12,17 @@ socket.on('reconnecting', () => log('Reconnecting...'));
 socket.on('reconnect_failed', (err) => log('Reconnect failed: %s', err));
 socket.on('error', err => log(err));
 
+export function subscribe(event, fn) {
+    socket.on(event, fn);
+}
+
 export function login(username) {
     return new Promise((resolve, reject) => {
-        socket.emit('login', username, (error) => {
+        socket.emit('login', username, (error, state) => {
             if (error) {
                 reject(error);
             } else {
-                resolve();
+                resolve(state);
             }
         });
     });
@@ -37,6 +41,7 @@ export function sendMessage(text) {
 }
 
 export default {
+    subscribe,
     login,
     sendMessage
 };

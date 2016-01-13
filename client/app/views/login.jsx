@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Card,CardTitle,RaisedButton,TextField} from 'material-ui';
 import connection from '../connection';
-import {login} from '../actions';
+import {login, serverState} from '../actions';
 import history from '../history';
 
 class Login extends React.Component {
@@ -61,8 +61,9 @@ class Login extends React.Component {
         e.preventDefault();
         const username = this.refs.username.getValue();
         this.setState({ error: '' });
-        connection.login(username).then(() => {
-            this.props.dispatch(login(username));
+        connection.login(username).then((state) => {
+            state.users = state.users.map(user => user.username);
+            this.props.dispatch(login(username, state));
             history.push('/');
         }).catch(err => this.setState({ error: err }));
     }

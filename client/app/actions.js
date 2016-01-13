@@ -1,37 +1,47 @@
 export const ACTION_TYPES = {
-    // WebSocket pushed events
-    PUSH_USERS: 'PUSH_USERS',
-    PUSH_MESSAGES: 'PUSH_MESSAGES',
-
-    // UI events
     LOGIN: 'LOGIN',
-    SEND_MESSAGE: 'SEND_MESSAGE'
+    LOGOUT: 'LOGOUT',
+    NEW_USER: 'NEW_USER',
+    REMOVE_USER: 'REMOVE_USER',
+    MESSAGE: 'MESSAGE'
 };
 
-export function pushUsers(users) {
-    return {
-        type: ACTION_TYPES.PUSH_USERS,
-        payload: users
-    };
-}
-
-export function pushMessages(messages) {
-    return {
-        type: ACTION_TYPES.PUSH_MESSAGES,
-        payload: messages
-    };
-}
-
-export function login(username) {
+export function login(username, state) {
     return {
         type: ACTION_TYPES.LOGIN,
+        payload: {
+            username,
+            state
+        }
+    };
+}
+
+export function logout() {
+    return {
+        type: ACTION_TYPES.LOGOUT
+    };
+}
+
+export function newUser(username) {
+    return {
+        type: ACTION_TYPES.NEW_USER,
         payload: username
     };
 }
 
-export function sendMessage(text) {
+export function removeUser(username) {
     return {
-        type: ACTION_TYPES.SEND_MESSAGE,
-        payload: text
+        type: ACTION_TYPES.REMOVE_USER,
+        payload: username
+    };
+}
+
+export function newMessage(username, text) {
+    return {
+        type: ACTION_TYPES.MESSAGE,
+        payload: {
+            username,
+            text
+        }
     };
 }

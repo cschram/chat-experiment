@@ -1,8 +1,14 @@
 import React from 'react';
 import {RaisedButton,TextField} from 'material-ui';
-import {sendMessage} from '../actions';
+import {newMessage} from '../actions';
+import {sendMessage} from '../connection';
 
 export default class MessageInput extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { error: '' };
+    }
+
     render() {
         let styles = this.getStyles();
         return (
@@ -27,9 +33,11 @@ export default class MessageInput extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const message = this.refs.message.getValue();
+        this.setState({ error: '' });
         if (message.length) {
-            this.props.dispatch(sendMessage(message));
-            this.refs.message.clearValue();
+            sendMessage(message)
+                .then(() => this.refs.message.clearValue())
+                .catch(err => this.setState({ error: err }));
         }
     }
 }

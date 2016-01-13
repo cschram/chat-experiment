@@ -5,44 +5,28 @@ let Server = require('socket.io');
 let config = require('../config.json');
 let logger = require('./logger');
 let db = require('./db');
+let FeedManager = require('./feed-manager');
+let ConnectionManager = require('./connection-manager');
 
-const SERVER_ERROR = 'Unknown server error, please try again later.';
+let dbConn;
+let feedMgr;
 
 db.connect(config.database).then((conn) => {
-    logger.info('Connected to database');
-
+    logger.info('Connected to database.');
+    dbConn = conn;
+    feedMgr = new FeedManager(dbConn);
+    return Promise.all([
+        feedMgr.createFeed('users'),
+        feedMgr.createFeed('messages')
+    ]);
+}).then(() => {
+    logger.info('Setup database feeds.');
     let io = Server(config.server.port);
+    logger.info('Started socket server.');
 
     io.on('connection', (sock) => {
         logger.info('New connection.');
-        let username = null;
-
-        sock.on('login', (name, done) => {
-            if (username) {
-                done(`Already logged in as "${username}."`);
-            } else {
-                conn.loginUser(name).then(() => {
-                    logger.info(`New login from "${name}".`);
-                    username = name;
-                    done(null);
-                }).catch((err) => {
-                    if (typeof err === 'string') {
-                        done(err);
-                    } else {
-                        logger.error(err);
-                        done(SERVER_ERROR)
-                    }
-                });
-            }
-        });
-
-        sock.on('disconnect', () => {
-            if (username) {
-                logger.info(`User "${username}" disconnected.`);
-                conn.logoutUser(username).catch(e => logger.error(e));
-                username = null;
-            }
-        });
+        let connMgr = new ConnectionManager(sock, dbConn, feedMgr);
     });
 }).catch((err) => {
     logger.error(err);

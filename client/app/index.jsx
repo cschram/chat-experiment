@@ -10,6 +10,8 @@ injectTapEventPlugin();
 
 import store from './store';
 import history from './history';
+import {newUser, removeUser, newMessage} from './actions';
+import {subscribe} from './connection';
 import Chat from './views/chat.jsx';
 import Login from './views/login.jsx';
 
@@ -24,6 +26,10 @@ function loginRedirect(nextState, replaceState) {
     if (store.getState().currentUser)
         replaceState(null, '/');
 }
+
+subscribe('users:new', user => store.dispatch(newUser(user)));
+subscribe('users:remove', user => store.dispatch(removeUser(user)));
+subscribe('messages:new', msg => store.dispatch(newMessage(msg.username, msg.text)));
 
 render((
     <Provider store={store}>
