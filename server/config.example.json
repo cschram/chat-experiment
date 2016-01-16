@@ -1,5 +1,6 @@
 {
     "logDirectory": "logs/",
+    "secret": "secret",
     "server": {
         "host": "localhost",
         "port": 9000

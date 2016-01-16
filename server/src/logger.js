@@ -9,7 +9,7 @@ function timestamp() {
 }
 
 module.exports = new winston.Logger({
-    transports: [
+  transports: [
     new winston.transports.Console({
       colorize    : true,
       json        : false,

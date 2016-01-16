@@ -1,0 +1,24 @@
+{
+  "name": "perf-bot",
+  "version": "1.0.0",
+  "description": "Test chat apps ability to handle load with an automated bot.",
+  "main": "perfbot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cschram/chat-experiment.git"
+  },
+  "author": "Corey Schram <coreyschram@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cschram/chat-experiment/issues"
+  },
+  "homepage": "https://github.com/cschram/chat-experiment#readme",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "socket.io-client": "^1.4.4",
+    "winston": "^2.1.1"
+  }
+}

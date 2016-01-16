@@ -1,0 +1,39 @@
+{
+    "apps": [{
+        "name": "PerfBot1",
+        "script": "perfbot.js",
+        "args": [
+            "--username", "PerfBot1",
+            "--log", "logs/PerfBot1.log",
+            "--interval", "1000"
+        ],
+        "watch": true
+    }, {
+        "name": "PerfBot2",
+        "script": "perfbot.js",
+        "args": [
+            "--username", "PerfBot2",
+            "--log", "logs/PerfBot2.log",
+            "--interval", "1000"
+        ],
+        "watch": true
+    }, {
+        "name": "PerfBot3",
+        "script": "perfbot.js",
+        "args": [
+            "--username", "PerfBot3",
+            "--log", "logs/PerfBot3.log",
+            "--interval", "1000"
+        ],
+        "watch": true
+    }, {
+        "name": "PerfBot4",
+        "script": "perfbot.js",
+        "args": [
+            "--username", "PerfBot4",
+            "--log", "logs/PerfBot4.log",
+            "--interval", "1000"
+        ],
+        "watch": true
+    }]
+}

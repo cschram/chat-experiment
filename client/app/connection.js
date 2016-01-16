@@ -18,11 +18,11 @@ export function subscribe(event, fn) {
 
 export function login(username) {
     return new Promise((resolve, reject) => {
-        socket.emit('login', username, (error, state) => {
+        socket.emit('auth:login', username, (error, response) => {
             if (error) {
                 reject(error);
             } else {
-                resolve(state);
+                resolve(response.state);
             }
         });
     });

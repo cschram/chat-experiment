@@ -1,26 +1,45 @@
 "use strict";
 
 let logger = require('./logger');
+let Session = require('./session');
+let config = require('../config.json');
 
 const SERVER_ERROR = 'Unknown server error, please try again later.';
 
+// This whole thing can really be refactored into a fuynction
 class ConnectionManager {
     constructor(sock, db, feeds) {
         this.sock = sock;
         this.db = db;
         this.feeds = feeds;
-        this.username = null;
+        this.session = new Session(config.secret);
         this.listeners = {};
 
         sock.on('disconnect', () => {
             this.logout();
         });
 
-        sock.on('login', (username, done) => {
+        sock.on('auth:restore', (token, done) => {
+            if (this.session.parse(token) && this.session.isAuthed()) {
+                this.login(this.session.get('username'))
+                    .then((state) => {
+                        this.postLogin();
+                        done(true, state);
+                    })
+                    .catch(err => done(false));
+            } else {
+                done(false);
+            }
+        });
+
+        sock.on('auth:login', (username, done) => {
             this.login(username)
                 .then((state) => {
                     this.postLogin();
-                    done(null, state);
+                    done(null, {
+                        token: this.session.getToken(),
+                        state
+                    });
                 })
                 .catch(err => done(err));
         });
@@ -33,12 +52,15 @@ class ConnectionManager {
     }
 
     login(username) {
-        if (this.username) {
-            return Promise.reject(`Already logged in as "${username}."`);
+        if (this.session.isAuthed()) {
+            return Promise.reject(`Already logged in as "${this.session.get('username')}."`);
         } else {
             return this.db.loginUser(username).then(() => {
                 logger.info(`New login from "${username}".`);
-                this.username = username;
+                this.session.set({
+                    authed: true,
+                    username
+                });
                 return Promise.all([
                     this.db.getUsers(),
                     this.db.getMessages()
@@ -59,13 +81,15 @@ class ConnectionManager {
     }
 
     logout() {
-        if (this.username) {
-            logger.info(`User "${this.username}" logged out.`);
-            this.db.logoutUser(this.username).catch(e => logger.error(e));
+        if (this.session.isAuthed()) {
+            let username = this.session.get('username');
+            logger.info(`User "${username}" logged out.`);
+            this.db.logoutUser(username).catch(e => logger.error(e));
             Object.keys(this.listeners).forEach(feed => {
                 this.feeds.removeListener(feed, this.listeners[feed]);
             });
-            this.username = null;
+            this.session.clear();
+            this.sock.emit('auth:clear');
             this.listeners = {};
         }
     }
@@ -76,10 +100,11 @@ class ConnectionManager {
     }
 
     sendMessage(text) {
-        if (!this.username) {
+        if (!this.session.isAuthed()) {
             Promise.reject('You must be logged in.');
         } else {
-            return this.db.sendMessage(this.username, text);
+            return this.db.sendMessage(this.session.get('username'),
+                                       text);
         }
     }
 
