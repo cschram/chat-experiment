@@ -1,2 +1,4 @@
-import {createHistory} from 'history';
-export default createHistory();
+import {createHistory, useBasename} from 'history';
+export default useBasename(createHistory)({
+    basename: '/chat'
+});
