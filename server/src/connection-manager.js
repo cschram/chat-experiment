@@ -21,10 +21,14 @@ class ConnectionManager {
 
         sock.on('auth:restore', (token, done) => {
             if (this.session.parse(token) && this.session.isAuthed()) {
-                this.login(this.session.get('username'))
+                let username = this.session.get('username');
+                this.login(username)
                     .then((state) => {
                         this.postLogin();
-                        done(true, state);
+                        done(true, {
+                            username,
+                            state
+                        });
                     })
                     .catch(err => done(false));
             } else {
@@ -33,15 +37,19 @@ class ConnectionManager {
         });
 
         sock.on('auth:login', (username, done) => {
-            this.login(username)
-                .then((state) => {
-                    this.postLogin();
-                    done(null, {
-                        token: this.session.getToken(),
-                        state
-                    });
-                })
-                .catch(err => done(err));
+            if (this.session.isAuthed()) {
+                done(`Already logged in as "${this.session.get('username')}."`);
+            } else {
+                this.login(username)
+                    .then((state) => {
+                        this.postLogin();
+                        done(null, {
+                            token: this.session.getToken(),
+                            state
+                        });
+                    })
+                    .catch(err => done(err));
+            }
         });
 
         sock.on('messages:send', (text, done) => {
@@ -52,32 +60,28 @@ class ConnectionManager {
     }
 
     login(username) {
-        if (this.session.isAuthed()) {
-            return Promise.reject(`Already logged in as "${this.session.get('username')}."`);
-        } else {
-            return this.db.loginUser(username).then(() => {
-                logger.info(`New login from "${username}".`);
-                this.session.set({
-                    authed: true,
-                    username
-                });
-                return Promise.all([
-                    this.db.getUsers(),
-                    this.db.getMessages()
-                ]);
-            }).then((results) => {
-                let users = results[0];
-                let messages = results[1];
-                return { users, messages };
-            }).catch((err) => {
-                if (typeof err === 'string') {
-                    throw err;
-                } else {
-                    logger.error(err);
-                    throw SERVER_ERROR;
-                }
+        return this.db.loginUser(username).then(() => {
+            logger.info(`New login from "${username}".`);
+            this.session.set({
+                authed: true,
+                username
             });
-        }
+            return Promise.all([
+                this.db.getUsers(),
+                this.db.getMessages()
+            ]);
+        }).then((results) => {
+            let users = results[0];
+            let messages = results[1];
+            return { users, messages };
+        }).catch((err) => {
+            if (typeof err === 'string') {
+                throw err;
+            } else {
+                logger.error(err);
+                throw SERVER_ERROR;
+            }
+        });
     }
 
     logout() {

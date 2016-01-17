@@ -11,8 +11,9 @@ class DBConnection {
     connect() {
         return r.connect(this._config).then((conn) => {
             this.conn = conn;
-            return this;
-        });
+            // Clear active users
+            return r.table('users').delete().run(conn);
+        }).then(() => this);
     }
 
     getUser(username) {

@@ -1,6 +1,7 @@
 import io from 'socket.io-client';
 import debug from 'debug';
 import {server} from '../config.json';
+import {setToken} from './session';
 
 const log = debug('connection');
 const socket = io(`${server.host}:${server.port}`);
@@ -16,12 +17,25 @@ export function subscribe(event, fn) {
     socket.on(event, fn);
 }
 
+export function restoreSession(token) {
+    return new Promise((resolve, reject) => {
+        socket.emit('auth:restore', token, (valid, response) => {
+            if (valid) {
+                resolve(response);
+            } else {
+                reject();
+            }
+        });
+    });
+}
+
 export function login(username) {
     return new Promise((resolve, reject) => {
         socket.emit('auth:login', username, (error, response) => {
             if (error) {
                 reject(error);
             } else {
+                setToken(response.token);
                 resolve(response.state);
             }
         });
