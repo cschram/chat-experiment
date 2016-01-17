@@ -5,35 +5,64 @@
         "args": [
             "--username", "PerfBot1",
             "--log", "logs/PerfBot1.log",
-            "--interval", "1000"
-        ],
-        "watch": true
+            "--interval", "500"
+        ]
     }, {
         "name": "PerfBot2",
         "script": "perfbot.js",
         "args": [
             "--username", "PerfBot2",
             "--log", "logs/PerfBot2.log",
-            "--interval", "1000"
-        ],
-        "watch": true
+            "--interval", "500"
+        ]
     }, {
         "name": "PerfBot3",
         "script": "perfbot.js",
         "args": [
             "--username", "PerfBot3",
             "--log", "logs/PerfBot3.log",
-            "--interval", "1000"
-        ],
-        "watch": true
+            "--interval", "500"
+        ]
     }, {
         "name": "PerfBot4",
         "script": "perfbot.js",
         "args": [
             "--username", "PerfBot4",
             "--log", "logs/PerfBot4.log",
-            "--interval", "1000"
-        ],
-        "watch": true
+            "--interval", "500"
+        ]
+    },
+    {
+        "name": "PerfBot5",
+        "script": "perfbot.js",
+        "args": [
+            "--username", "PerfBot5",
+            "--log", "logs/PerfBot5.log",
+            "--interval", "500"
+        ]
+    }, {
+        "name": "PerfBot6",
+        "script": "perfbot.js",
+        "args": [
+            "--username", "PerfBot6",
+            "--log", "logs/PerfBot6.log",
+            "--interval", "500"
+        ]
+    }, {
+        "name": "PerfBot7",
+        "script": "perfbot.js",
+        "args": [
+            "--username", "PerfBot7",
+            "--log", "logs/PerfBot7.log",
+            "--interval", "500"
+        ]
+    }, {
+        "name": "PerfBot8",
+        "script": "perfbot.js",
+        "args": [
+            "--username", "PerfBot8",
+            "--log", "logs/PerfBot8.log",
+            "--interval", "500"
+        ]
     }]
 }
